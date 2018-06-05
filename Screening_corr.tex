@@ -156,62 +156,6 @@ The fifth force for the symmetron is
 	F_\phi = \frac{\phi\nabla \phi}{M_s^2} = - \frac{1}{M_s^2} \left(\frac{BR}{r} e^{-\sqrt{2} \mu r} + \phi_0 \right) \left( \frac{BR}{r} e^{-\sqrt{2}\mu r} \left( \frac{1}{r} + \sqrt{2} \mu \right) \right)
 \end{equation}
 
-\subsection{Putting the action into Horndeski form}
-
-We begin with the canonical action of a single scalar field $\phi$:
-
-\begin{equation}
-\tilde{S} = \int d^4x \sqrt{-\tilde{g}} \left\{\frac{M_\text{pl}^2}{2} \mathcal{\tilde{R}} - \frac{1}{2} (\tilde{\partial} \phi)^2 - V(\phi) \right\} - \int d^4x \: \mathcal{L}_m(\psi_m, \exp(-2\beta\phi/M_\text{pl}) \tilde{g}_{\mu \nu}),
-\end{equation}
-
-\noindent where $\beta$ is the coupling coefficient, $\psi_m$ is the matter field and $\mathcal{L}_m$ is the matter Lagrangian. This is written in the Einstein frame (denoted by tilde), where the gravitational part of the action takes its GR form and hence the left-hand side of Einstein's equation is unaffected by the scalar field, but $\phi$ couples to matter in $\mathcal{L}_m$ so that particles do not move on geodesics but rather feel a fifth force. The form of the potential $V(\phi)$ determines the field's screening properties. To transform to the Jordan frame, in which matter moves on geodesics but the gravitational action is altered, we perform a conformal transformation with factor $\Omega \equiv \exp(\beta \phi/M_\text{pl})$. The components transform as follows:
-
-\begin{equation}
-\tilde{g}_{\mu \nu} = \exp\left(\frac{2 \beta \phi}{M_\text{pl}}\right) g_{\mu \nu},
-\end{equation}
-
-\begin{equation}
-\tilde{g}^{\mu \nu} = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) g^{\mu \nu},
-\end{equation}
-
-\begin{equation}
-\sqrt{-\tilde{g}} = \exp\left(\frac{4\beta\phi}{M_\text{pl}}\right) \sqrt{-g},
-\end{equation}
-
-\begin{equation}
-\tilde{\mathcal{R}} = \exp\left(-\frac{2\beta\phi}{M_\text{pl}}\right) \left[\mathcal{R} - 6 g^{\alpha \beta} \nabla_\alpha \nabla_\beta \left(\frac{\beta \phi}{M_\text{pl}}\right) - 6 g^{\alpha \beta} \nabla_\alpha \left(\frac{\beta \phi}{M_\text{pl}}\right) \nabla_\beta \left(\frac{\beta \phi}{M_\text{pl}}\right)\right]
-\end{equation}
-
-\begin{equation}
-\Rightarrow \tilde{\mathcal{R}} = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) \left[\mathcal{R} - 6 \frac{\beta}{M_\text{pl}} \Box \phi - 6 \frac{\beta^2}{M_\text{pl}^2} g^{\alpha \beta} \nabla_\alpha \phi \nabla_\beta \phi \right],
-\end{equation}
-
-\begin{equation}
-(\tilde{\partial} \phi)^2 \equiv \tilde{g}^{\mu \nu} \nabla_\mu \phi \nabla_\nu \phi = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) g^{\mu \nu} \nabla_\mu \phi \nabla_\nu \phi = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) (\partial \phi)^2,
-\end{equation}
-
-\noindent and $\phi$ itself is unaffected. Putting this all together, we find for the Jordan-frame action
-
-\begin{equation}
-S = \int d^4x \sqrt{-g} \exp\left(\frac{2\beta \phi}{M_\text{pl}}\right) \left(\mathcal{R} - \frac{6\beta}{M_\text{pl}} \Box \phi - \frac{6\beta^2}{M_\text{pl}^2} \partial_c \phi \partial^c \phi -\frac{1}{2} \partial_c \phi \partial^c \phi - \exp\left(\frac{2 \beta \phi}{M_\text{pl}}\right) V(\phi) \right)- \int d^4x \: \mathcal{L}_m(\psi_m, g_{\mu \nu}).
-\end{equation}
-
-Comparing this to the Horndeski form \cite{Zumalacarregui:2016pph}, the only non-zero coefficients are
-
-\begin{equation}
-G_2 = -\exp\left(\frac{4\beta\phi}{M_\text{pl}}\right) V(\phi) + \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right) X \left(1 + 12 \frac{\beta^2}{M_\text{pl}^2}\right),
-\end{equation}
-
-\begin{equation}
-G_3 = \frac{6\beta}{M_\text{pl}} \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right),
-\end{equation}
-
-\begin{equation}
-G_4 = \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right),
-\end{equation}
-
-\noindent where $X$ is the scalar field kinetic term $-\frac{1}{2} \partial_c \phi \partial^c \phi$.
-
 \section{Parity breaking correlation functions}
 
 The overdensity of bright galaxies can be written as
@@ -271,6 +215,7 @@ Under this modification to the Euler equation we can rewrite the Eq (\ref{rel_sc
 	\Delta^{rel}_B(z,\hat{n}) & \equiv & -\left( \frac{\mathcal{H}}{\mathcal{H}^2} + \frac{2}{r\mathcal{H}} + 5 s_B \left( 1 - \frac{1}{r\mathcal{H}} \right) \right) \vec{v} \cdot \hat{n}
 \end{eqnarray}
 
+
 Using these we can write down correlation functions as normal. 
 The only terms that will change will be terms that previously dependent on the relativistic part. 
 
@@ -282,7 +227,33 @@ Lets start with writing down the correlation function in normal GR.
 	& & \left. \left(b_BT_D(k,r) - \frac{k}{\mathcal{H}(r)} (\hat{\textbf{k}} \cdot \hat{\textbf{n}})^2 T_V(k,r)\right) - (r \leftrightarrow r') \right)
 \end{eqnarray}
 
+We can use better notation to write this in terms of the angular integrals. 
+
+\begin{eqnarray}
+	\xi^{rel}(r,r',\theta) & = & A \int \frac{d \ln k}{(2\pi)^3} (k\eta_0)^{n_s-1} \left[ G(r') T_v(k,r') \left( I_0(\hat{n}') b_BT_D(k,r) - I_2(\hat{n}', \hat{n}) \frac{k}{\mathcal{H}(r)} T_v(k,r) \right) \right. \nonumber \\
+	& - & \left. G(r) T_v(k,r) \left( I_0(\hat{n}) b_F T_D(k,r') - I_2(\hat{n}, \hat{n}') \frac{k}{\mathcal{H}(r')} T_v(k,r') \right) \right] \nonumber \\
+	G(r) & = & \frac{\dot{\mathcal{H}}(r)}{\mathcal{H}(r)^2} + \frac{2}{r\mathcal{H}(r)} + 5 s_B(r) \left( 1 - \frac{1}{r \mathcal{H}(r)} \right) \nonumber \\
+	I_0(\hat{n}) & = & \int d \Omega_k  e^{i \vec{k} (\vec{x}'- \vec{x})} (i \hat{k} \cdot \hat{n}) \nonumber \\
+	I_2(\hat{n}, \hat{n}') & = & \int d \Omega_k  e^{i \vec{k} (\vec{x}'- \vec{x})} (i \hat{k} \cdot \hat{n}) (\hat{k} \cdot \hat{n}')^2
+\end{eqnarray}
+
 Now we can look at the correlation function for modified gravity. 
+
+\begin{eqnarray}
+	& & \langle \Delta^{st}_B(z,\hat{n}) \Delta^{rel(MG)}_F(z',\hat{n}') \rangle = A \left(1 - \frac{1}{1 + \alpha^2} \right) \int \frac{ d \ln k}{(2\pi)^3} (k \eta_0)^{n_s -1} \left( I_0(\hat{n}) \mathcal{G}(r) b_B T_D(k,r') - I_2(\hat{n}, \hat{n}') \mathcal{G}(r) \frac{k}{\mathcal{H}(r')} T_v(k,r') \right) \nonumber \\
+	& & G(r) = \frac{\dot{T}_v(k,r)}{\mathcal{H}(r)} + T_v(k,r)
+\end{eqnarray}
+
+Lets compute the integrals $I_0, I_2$ 
+
+\begin{eqnarray}
+	I_0(\hat{n}) & = & - \frac{(4 \pi)^2}{3} \sum_M \sum_{m=-1}^1 j_1(kd) Y_{1M}(\hat{N}) Y_{1m}(\hat{n}) 
+\end{eqnarray}
+\begin{eqnarray}
+	I_2(\hat{n}, \hat{n}') & = & \frac{(4 \pi)^2 8 \pi}{45} \sum_{LM} \sum_{m=-1}^1 i^{L+1} j_L(kd) \sqrt{\frac{(2L+1)15}{4 \pi}} \begin{pmatrix} L & 2 & 1 \\ -M & -m & -m' \end{pmatrix} \begin{pmatrix} L & 2 & 1 \\ 0 & 0 & 0 \end{pmatrix} \nonumber \\
+	& - & \left( \frac{ 4\pi}{3} \right)^2 \sum^1_{m=-1} j_1(kd)Y^*_{1m}(\hat{N}) Y_{1m}(\hat{n}) \delta_{Mm} \nonumber \\
+	& = & \left( \frac{( 4\pi)^2 8 \pi}{45} \right) T_\Omega
+\end{eqnarray}
 
 \begin{eqnarray}
 	\langle \Delta^{st}_B(z,\hat{n}) \Delta^{rel(MG)}_F(z',\hat{n}') \rangle & = & A \int \frac{dk \ d \Omega_k}{2 \pi} e^{i\vec{k}(\vec{x}'-\vec{x})} \frac{(k\eta_0)^{n_s-1}}{k^2} \left[ \left( 1 - \frac{1}{1+ \alpha^2} \right) \left((i\vec{k} \cdot \hat{n})  \left( \frac{\dot{T}_v(k,r)}{\mathcal{H}} + T_v(k,r) \right) \right) \right] \nonumber \\
@@ -300,7 +271,7 @@ Lets focus on one term first, $T1$ and do the angular integral first
 
 \begin{eqnarray}
 	T1 & =  &  \int   d \Omega_k \ e^{i \vec{k} (\vec{x}' - \vec{x})} (i\vec{k} \cdot \hat{n}) \frac{(k \eta_0)^{n_s - 1}}{k} \frac{b_B}{\mathcal{H}} \dot{T}_v(k,r) T_D(k',r') \nonumber \\
-	& = &  \frac{(4 \pi)^2}{3} \int d \Omega_k \ \sum_{LM} \sum_{m=-1}^1 i^{L+1} \ j_L(kd) Y^*_{LM}(\vec{k}) Y_{lm}(\hat{N}) Y^*_{1m}(\hat{k}) Y_{1m}(\hat{n}) \frac{(k \eta_0)^{n_s-1}}{k} \frac{b_B}{\mathcal{H}} \dot{T}_v(k,r)T_D(k',r') \nonumber \\
+	& = &  \frac{(4 \pi)^2}{3} \int d \Omega_k \ \sum_{LM} \sum_{m=-1}^1 \sum_{m'=-2}^2 i^{L+1} \ j_L(kd) Y^*_{LM}(\vec{k}) Y_{lm}(\hat{N}) Y^*_{1m}(\hat{k}) Y_{1m}(\hat{n}) \frac{(k \eta_0)^{n_s-1}}{k} \frac{b_B}{\mathcal{H}} \dot{T}_v(k,r)T_D(k',r') \nonumber \\
 	& = &  \frac{(4 \pi)^2}{3} \sum^1_{M,m = -1} (-1) \delta_{Mm} Y_{1M} (\hat{N}) Y_{1m} (\hat{n}) \frac{(k \eta_0)^{n_s-1}}{k} \frac{b_B}{\mathcal{H}} j_i(kd) \dot{T}_v(k,r) T_d(k',r')
 \end{eqnarray}
 
