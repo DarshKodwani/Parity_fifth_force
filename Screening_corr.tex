@@ -156,6 +156,62 @@ The fifth force for the symmetron is
 	F_\phi = \frac{\phi\nabla \phi}{M_s^2} = - \frac{1}{M_s^2} \left(\frac{BR}{r} e^{-\sqrt{2} \mu r} + \phi_0 \right) \left( \frac{BR}{r} e^{-\sqrt{2}\mu r} \left( \frac{1}{r} + \sqrt{2} \mu \right) \right)
 \end{equation}
 
+\subsection{Putting the action into Horndeski form}
+
+We begin with the canonical action of a single scalar field $\phi$:
+
+\begin{equation}
+\tilde{S} = \int d^4x \sqrt{-\tilde{g}} \left\{\frac{M_\text{pl}^2}{2} \mathcal{\tilde{R}} - \frac{1}{2} (\tilde{\partial} \phi)^2 - V(\phi) \right\} - \int d^4x \: \mathcal{L}_m(\psi_m, \exp(-2\beta\phi/M_\text{pl}) \tilde{g}_{\mu \nu}),
+\end{equation}
+
+\noindent where $\beta$ is the coupling coefficient, $\psi_m$ is the matter field and $\mathcal{L}_m$ is the matter Lagrangian. This is written in the Einstein frame (denoted by tilde), where the gravitational part of the action takes its GR form and hence the left-hand side of Einstein's equation is unaffected by the scalar field, but $\phi$ couples to matter in $\mathcal{L}_m$ so that particles do not move on geodesics but rather feel a fifth force. The form of the potential $V(\phi)$ determines the field's screening properties. To transform to the Jordan frame, in which matter moves on geodesics but the gravitational action is altered, we perform a conformal transformation with factor $\Omega \equiv \exp(\beta \phi/M_\text{pl})$. The components transform as follows:
+
+\begin{equation}
+\tilde{g}_{\mu \nu} = \exp\left(\frac{2 \beta \phi}{M_\text{pl}}\right) g_{\mu \nu},
+\end{equation}
+
+\begin{equation}
+\tilde{g}^{\mu \nu} = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) g^{\mu \nu},
+\end{equation}
+
+\begin{equation}
+\sqrt{-\tilde{g}} = \exp\left(\frac{4\beta\phi}{M_\text{pl}}\right) \sqrt{-g},
+\end{equation}
+
+\begin{equation}
+\tilde{\mathcal{R}} = \exp\left(-\frac{2\beta\phi}{M_\text{pl}}\right) \left[\mathcal{R} - 6 g^{\alpha \beta} \nabla_\alpha \nabla_\beta \left(\frac{\beta \phi}{M_\text{pl}}\right) - 6 g^{\alpha \beta} \nabla_\alpha \left(\frac{\beta \phi}{M_\text{pl}}\right) \nabla_\beta \left(\frac{\beta \phi}{M_\text{pl}}\right)\right]
+\end{equation}
+
+\begin{equation}
+\Rightarrow \tilde{\mathcal{R}} = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) \left[\mathcal{R} - 6 \frac{\beta}{M_\text{pl}} \Box \phi - 6 \frac{\beta^2}{M_\text{pl}^2} g^{\alpha \beta} \nabla_\alpha \phi \nabla_\beta \phi \right],
+\end{equation}
+
+\begin{equation}
+(\tilde{\partial} \phi)^2 \equiv \tilde{g}^{\mu \nu} \nabla_\mu \phi \nabla_\nu \phi = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) g^{\mu \nu} \nabla_\mu \phi \nabla_\nu \phi = \exp\left(-\frac{2 \beta \phi}{M_\text{pl}}\right) (\partial \phi)^2,
+\end{equation}
+
+\noindent and $\phi$ itself is unaffected. Putting this all together, we find for the Jordan-frame action
+
+\begin{equation}
+S = \int d^4x \sqrt{-g} \exp\left(\frac{2\beta \phi}{M_\text{pl}}\right) \left(\mathcal{R} - \frac{6\beta}{M_\text{pl}} \Box \phi - \frac{6\beta^2}{M_\text{pl}^2} \partial_c \phi \partial^c \phi -\frac{1}{2} \partial_c \phi \partial^c \phi - \exp\left(\frac{2 \beta \phi}{M_\text{pl}}\right) V(\phi) \right)- \int d^4x \: \mathcal{L}_m(\psi_m, g_{\mu \nu}).
+\end{equation}
+
+Comparing this to the Horndeski form \cite{Zumalacarregui:2016pph}, the only non-zero coefficients are
+
+\begin{equation}
+G_2 = -\exp\left(\frac{4\beta\phi}{M_\text{pl}}\right) V(\phi) + \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right) X \left(1 + 12 \frac{\beta^2}{M_\text{pl}^2}\right),
+\end{equation}
+
+\begin{equation}
+G_3 = \frac{6\beta}{M_\text{pl}} \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right),
+\end{equation}
+
+\begin{equation}
+G_4 = \exp\left(\frac{2\beta\phi}{M_\text{pl}}\right),
+\end{equation}
+
+\noindent where $X$ is the scalar field kinetic term $-\frac{1}{2} \partial_c \phi \partial^c \phi$.
+
 \section{Parity breaking correlation functions}
 
 The overdensity of bright galaxies can be written as
